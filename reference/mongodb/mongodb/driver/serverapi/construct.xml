@@ -17,7 +17,7 @@
   </methodsynopsis>
 
   <para>
-   Creates a new <classname>MongoDB\Driver\ServerApi</classname> instace used to
+   Creates a new <classname>MongoDB\Driver\ServerApi</classname> instance used to
    declare an API version when creating a
    <classname>MongoDB\Driver\Manager</classname>.
   </para>
