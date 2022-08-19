@@ -2694,7 +2694,7 @@ used.</para>'>
 
 <!-- mongodb -->
 <!ENTITY mongodb.changelog.tentative-return-types '
-       <row>
+       <row xmlns="http://docbook.org/ns/docbook">
         <entry>PECL mongodb 1.15.0</entry>
         <entry>
          Return types for methods are declared as tentative on PHP 8.0 and newer,
