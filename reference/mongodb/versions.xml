@@ -402,6 +402,13 @@
  <function name='mongodb\bson\int64::serialize' from='mongodb &gt;=1.5.0'/>
  <function name='mongodb\bson\int64::unserialize' from='mongodb &gt;=1.5.0'/>
 
+ <function name='mongodb\bson\iterator' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\iterator::current' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\iterator::key' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\iterator::next' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\iterator::rewind' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\iterator::valid' from='mongodb &gt;=1.16.0'/>
+
  <function name='mongodb\bson\javascript' from='mongodb &gt;=1.0.0'/>
  <function name='mongodb\bson\javascript::__construct' from='mongodb &gt;=1.0.0'/>
  <function name='mongodb\bson\javascript::__tostring' from='mongodb &gt;=1.2.0'/>
