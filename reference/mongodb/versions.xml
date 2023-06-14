@@ -431,6 +431,17 @@
  <function name='mongodb\bson\objectid::serialize' from='mongodb &gt;=1.2.0'/>
  <function name='mongodb\bson\objectid::unserialize' from='mongodb &gt;=1.2.0'/>
 
+ <function name='mongodb\bson\packedarray' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::__construct' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::__tostring' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::fromPHP' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::get' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::getIterator' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::has' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::serialize' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::toPHP' from='mongodb &gt;=1.16.0'/>
+ <function name='mongodb\bson\packedarray::unserialize' from='mongodb &gt;=1.16.0'/>
+
  <function name='mongodb\bson\regex' from='mongodb &gt;=1.0.0'/>
  <function name='mongodb\bson\regex::__construct' from='mongodb &gt;=1.0.0'/>
  <function name='mongodb\bson\regex::__tostring' from='mongodb &gt;=1.0.0'/>
