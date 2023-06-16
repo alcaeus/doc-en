@@ -21,10 +21,12 @@
    </para>
    <para>
     When working with raw BSON data through the
-    <classname>MongoDB\BSON\Value</classname> class, any 64-bit integer will be
-    returned as an instance of this class, regardless of platform and whether
-    the value can be represented as a PHP integer. This ensures that values can
-    be roundtripped without changing the type.
+    <classname>MongoDB\BSON\Document</classname>,
+    <classname>MongoDB\BSON\PackedArray</classname>, and
+    <classname>MongoDB\BSON\Iterator</classname> classes, any 64-bit integer
+    will be returned as an instance of this class, regardless of platform and
+    whether the value can be represented as a PHP integer. This ensures that
+    values can be roundtripped without changing the type.
    </para>
    <para>
     During BSON encoding, objects of this class will convert back to a 64-bit

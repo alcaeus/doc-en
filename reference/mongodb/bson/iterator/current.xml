@@ -10,7 +10,7 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>public</modifier> <type>MongoDB\BSON\Value</type><methodname>MongoDB\BSON\Iterator::current</methodname>
+   <modifier>public</modifier> <type>mixed</type><methodname>MongoDB\BSON\Iterator::current</methodname>
    <void/>
   </methodsynopsis>
  </refsect1>
@@ -23,9 +23,15 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Returns a <classname>MongoDB\BSON\Value</classname> instance containing the
-   value of the current element.
+   Returns the value of the current element.
   </para>
+  <note>
+   <simpara>
+    When encountering a value encoded as 64-bit integer in the BSON structure,
+    the return value of this method will be a
+    <classname>MongoDB\BSON\Int64</classname> instance.
+   </simpara>
+  </note>
  </refsect1>
 
  <refsect1 role="errors">

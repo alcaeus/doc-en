@@ -24,8 +24,7 @@
   &reftitle.returnvalues;
   <para>
    Returns a <classname>MongoDB\BSON\Iterator</classname> instance that can be
-   used to iterate over all indexes in the array. Each value will be returned as
-   a <classname>MongoDB\BSON\Value</classname> instance.
+   used to iterate over all indexes in the array.
   </para>
  </refsect1>
 

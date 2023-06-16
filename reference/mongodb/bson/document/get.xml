@@ -10,7 +10,7 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>final</modifier> <modifier>public</modifier> <type>MongoDB\BSON\Value</type><methodname>MongoDB\BSON\Document::get</methodname>
+   <modifier>final</modifier> <modifier>public</modifier> <type>mixed</type><methodname>MongoDB\BSON\Document::get</methodname>
    <methodparam><type>string</type><parameter>key</parameter></methodparam>
   </methodsynopsis>
  </refsect1>
@@ -32,10 +32,16 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Returns a <classname>MongoDB\BSON\Value</classname> instance containing the
-   value associated with the given key. If the key is not present in the
-   document, an exception is thrown.
+   Returns the value associated with the given key. If the key is not present in
+   the document, an exception is thrown.
   </para>
+  <note>
+   <simpara>
+    When encountering a value encoded as 64-bit integer in the BSON document,
+    the return value of this method will be a
+    <classname>MongoDB\BSON\Int64</classname> instance.
+   </simpara>
+  </note>
  </refsect1>
 
  <refsect1 role="errors">
