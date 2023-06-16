@@ -15,7 +15,7 @@
   </methodsynopsis>
   <para>
    <classname>MongoDB\BSON\PackedArray</classname> objects are created through
-   static factory methods and can not be instantiated directly.
+   static factory methods and cannot be instantiated directly.
   </para>
  </refsect1>
 
@@ -27,6 +27,7 @@
  <refsect1 role="seealso">
   &reftitle.seealso;
   <simplelist>
+   <member><methodname>MongoDB\BSON\PackedArray::fromPHP</methodname></member>
    <member><link xlink:href="&url.mongodb.docs.bson;">BSON Types</link></member>
   </simplelist>
  </refsect1>

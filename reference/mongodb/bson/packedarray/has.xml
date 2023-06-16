@@ -22,7 +22,7 @@
     <term><parameter>index</parameter> (<type>int</type>)</term>
     <listitem>
      <para>
-      The index to look for in the array
+      The index to look for in the array.
      </para>
     </listitem>
    </varlistentry>

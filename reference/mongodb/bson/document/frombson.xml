@@ -33,13 +33,15 @@
   &reftitle.errors;
   <simplelist>
    &mongodb.throws.argumentparsing;
-   <member>Throws <classname>MongoDB\Driver\Exception\UnexpectedValueException</classname> if <parameter>bson</parameter> is an invalid BSON strings or contains more than a single document.</member>
+   <member>Throws <classname>MongoDB\Driver\Exception\UnexpectedValueException</classname> if <parameter>bson</parameter> is an invalid BSON string or contains more than a single document.</member>
   </simplelist>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <simplelist>
+   <member><methodname>MongoDB\BSON\Document::fromPHP</methodname></member>
+   <member><methodname>MongoDB\BSON\Document::fromJSON</methodname></member>
    <member><link xlink:href="&url.mongodb.docs.bson;">BSON Types</link></member>
   </simplelist>
  </refsect1>

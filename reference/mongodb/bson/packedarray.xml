@@ -13,7 +13,7 @@
    &reftitle.intro;
    <para>
     Represents a BSON array. This class is used when reading data as raw BSON
-    and can not be modified.
+    and cannot be modified.
    </para>
   </section>
 <!-- }}} -->

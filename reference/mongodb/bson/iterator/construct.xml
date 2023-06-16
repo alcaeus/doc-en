@@ -16,7 +16,7 @@
   <para>
    <classname>MongoDB\BSON\Iterator</classname> objects are created by calling
    <methodname>MongoDB\BSON\Document::getIterator</methodname> or
-   <methodname>MongoDB\BSON\PackedArray::getIterator</methodname> and can not be
+   <methodname>MongoDB\BSON\PackedArray::getIterator</methodname> and cannot be
    instantiated directly.
   </para>
  </refsect1>

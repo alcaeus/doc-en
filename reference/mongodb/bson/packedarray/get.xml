@@ -22,7 +22,7 @@
     <term><parameter>key</parameter> (<type>int</type>)</term>
     <listitem>
      <para>
-      The index to retrieve from the array
+      The index to retrieve from the array.
      </para>
     </listitem>
    </varlistentry>

@@ -13,6 +13,11 @@
    <modifier>final</modifier> <modifier>static</modifier> <modifier>public</modifier> <type>MongoDB\BSON\Document</type><methodname>MongoDB\BSON\Document::fromJSON</methodname>
    <methodparam><type>string</type><parameter>json</parameter></methodparam>
   </methodsynopsis>
+  <para>
+   Converts an
+   <link xlink:href="&url.mongodb.docs.extendedjson;">extended JSON</link>
+   string to its BSON representation.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -22,7 +27,7 @@
     <term><parameter>json</parameter> (<type>string</type>)</term>
     <listitem>
      <para>
-      A string containing a document in JSON format.
+      JSON value to be converted.
      </para>
     </listitem>
    </varlistentry>
@@ -40,6 +45,8 @@
  <refsect1 role="seealso">
   &reftitle.seealso;
   <simplelist>
+   <member><methodname>MongoDB\BSON\Document::fromPHP</methodname></member>
+   <member><methodname>MongoDB\BSON\Document::fromBSON</methodname></member>
    <member><function>MongoDB\BSON\fromJSON</function></member>
    <member><link xlink:href="&url.mongodb.docs.extendedjson;">MongoDB Extended JSON</link></member>
    <member><link xlink:href="&url.mongodb.docs.bson;">BSON Types</link></member>

@@ -23,7 +23,7 @@
     <listitem>
      <para>
       A PHP object or array containing the document. When passing an array with
-      numeric keys, the numeric values are converted to string and used as
+      numeric keys, the numeric values are converted to strings and used as
       document keys.
      </para>
     </listitem>
@@ -41,6 +41,8 @@
  <refsect1 role="seealso">
   &reftitle.seealso;
   <simplelist>
+   <member><methodname>MongoDB\BSON\Document::fromBSON</methodname></member>
+   <member><methodname>MongoDB\BSON\Document::fromJSON</methodname></member>
    <member><function>MongoDB\BSON\fromPHP</function></member>
    <member><link xlink:href="&url.mongodb.docs.bson;">BSON Types</link></member>
   </simplelist>

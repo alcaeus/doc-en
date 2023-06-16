@@ -25,7 +25,7 @@
   <para>
    Returns the key of the current element. When iterating a BSON document, the
    key will always be a <type>string</type>. When iterating a BSON array, the
-   key will be a <type>int</type>.
+   key will be an <type>int</type>.
   </para>
  </refsect1>
 

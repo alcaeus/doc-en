@@ -11,7 +11,7 @@
   &reftitle.description;
   <methodsynopsis>
    <modifier>final</modifier> <modifier>public</modifier> <methodname>MongoDB\BSON\Int64::__construct</methodname>
-   <methodparam><type class="union"><type>int</type><type>string</type></type><parameter>value</parameter><initializer>&null;</initializer></methodparam>
+   <methodparam><type class="union"><type>int</type><type>string</type></type><parameter>value</parameter></methodparam>
   </methodsynopsis>
   <para>
    Creates a new <classname>MongoDB\BSON\Int64</classname> instance for the
@@ -60,6 +60,14 @@
     </tgroup>
    </informaltable>
   </para>
+ </refsect1>
+
+ <refsect1 role="errors">
+  &reftitle.errors;
+  <simplelist>
+   &mongodb.throws.argumentparsing;
+   <member>Throws <classname>MongoDB\Driver\Exception\InvalidArgumentException</classname> if string <parameter>value</parameter> cannot be parsed as a 64-bit integer.</member>
+  </simplelist>
  </refsect1>
 
  <refsect1 role="seealso">

@@ -13,6 +13,12 @@
    <modifier>final</modifier> <modifier>public</modifier> <type class="union"><type>array</type><type>object</type></type><methodname>MongoDB\BSON\Document::toPHP</methodname>
    <methodparam choice="opt"><type class="union"><type>array</type><type>null</type></type><parameter>typeMap</parameter><initializer>&null;</initializer></methodparam>
   </methodsynopsis>
+  <para>
+   Unserializes the BSON document to its PHP representation. The
+   <parameter>typeMap</parameter> paramater may be used to control the PHP types
+   used for converting BSON arrays and documents (both root and embedded).
+  </para>
+  &mongodb.warning.duplicate-keys;
  </refsect1>
 
  <refsect1 role="parameters">

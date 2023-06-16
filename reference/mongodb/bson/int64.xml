@@ -13,10 +13,10 @@
    &reftitle.intro;
    <para>
     BSON type for a 64-bit integer. When decoding BSON to PHP data, this class
-    is used when a 64-bit integer cannot be represented as a PHP integer (i.e.
-    on 32-bit platforms). These objects support overloaded
+    is used when a 64-bit integer cannot be represented as a PHP integer on
+    32-bit platforms. These objects support overloaded
     <link linkend="language.operators.arithmetic">arithmetic</link>,
-    <link linkend="language.operators.bitwise">bitwise</link> and
+    <link linkend="language.operators.bitwise">bitwise</link>, and
     <link linkend="language.operators.comparison">comparison</link> operators.
    </para>
    <para>
@@ -91,7 +91,7 @@
         <entry>PECL mongodb 1.16.0</entry>
         <entry>
          The class can now be instantiated on all platforms. Added support for
-         overloaded arithmetic, bitwise and comparison operators.
+         overloaded arithmetic, bitwise, and comparison operators.
         </entry>
        </row>
        <row>
