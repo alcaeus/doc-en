@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 
-<refentry xml:id="mongodb-bson-serializable.bsonserialize" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xml:id="mongodb-bson-persistable.bsonserialize" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-  <refname>MongoDB\BSON\Serializable::bsonSerialize</refname>
+  <refname>MongoDB\BSON\Persistable::bsonSerialize</refname>
   <refpurpose>Provides an array or document to serialize as BSON</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>abstract</modifier> <modifier>public</modifier> <type class="union"><type>array</type><classname>stdClass</classname><classname>MongoDB\BSON\Document</classname><classname>MongoDB\BSON\PackedArray</classname></type><methodname>MongoDB\BSON\Serializable::bsonSerialize</methodname>
+   <modifier>abstract</modifier> <modifier>public</modifier> <type class="union"><type>array</type><classname>stdClass</classname><classname>MongoDB\BSON\Document</classname></type><methodname>MongoDB\BSON\Persistable::bsonSerialize</methodname>
    <void />
   </methodsynopsis>
   <para>
    Called during serialization of the object to BSON. The method must return an
-   <type>array</type>, <classname>stdClass</classname>, <classname>MongoDB\BSON\Document</classname>,
-   or <classname>MongoDB\BSON\PackedArray</classname>.
+   <type>array</type>, <classname>stdClass</classname>, or
+   <classname>MongoDB\BSON\Document</classname>.
   </para>
   <para>
    Root documents (e.g. a
-   <interfacename>MongoDB\BSON\Serializable</interfacename> passed to
+   <interfacename>MongoDB\BSON\Persistable</interfacename> passed to
    <function>MongoDB\BSON\fromPHP</function>) will always be serialized as a
    BSON document. For field values, associative arrays and
    <classname>stdClass</classname> instances will be serialized as a BSON
@@ -45,9 +45,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   An <type>array</type>, <classname>stdClass</classname>, <classname>MongoDB\BSON\Document</classname>,
-   or <classname>MongoDB\BSON\PackedArray</classname> to be serialized as a BSON
-   array or document.
+   An <type>array</type>, <classname>stdClass</classname>, or <classname>MongoDB\BSON\Document</classname>
+   to be serialized as a BSON array or document.
   </para>
  </refsect1>
 
@@ -67,19 +66,8 @@
        <entry>PECL mongodb 1.17.0</entry>
        <entry>
         <para>
-         The return type was changed from <type class="union"><type>array</type><type>object</type></type>.
-         Instead of <type>object</type>, the return type now specifies <classname>stdClass</classname>.
-         Classes that implement this interface must be changed to no longer
-         declare an <type>object</type> return type. As the return type is
-         tentative, a deprecation warning is emitted on PHP 8.1 and newer.
-        </para>
-        <para>
-         In addition to the changes above, the driver now also supports
-         returning instances of <classname>MongoDB\BSON\Document</classname>
-         and <classname>MongoDB\BSON\PackedArray</classname>. Please note that
-         any <classname>MongoDB\BSON\PackedArray</classname> instances returned
-         are silently converted to objects when stored as root documents. They
-         are stored as arrays when used as an embedded field value.
+         This method may now also return <classname>MongoDB\BSON\Document</classname>
+         instances in addition to <type>array</type> and <classname>stdClass</classname>.
         </para>
        </entry>
       </row>
@@ -93,12 +81,12 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <example>
-   <title><function>MongoDB\BSON\Serializable::bsonSerialize</function> returning an associative array for root document</title>
+   <title><function>MongoDB\BSON\Persistable::bsonSerialize</function> returning an associative array for root document</title>
    <programlisting role="php">
 <![CDATA[
 <?php
 
-class MyDocument implements MongoDB\BSON\Serializable
+class MyDocument implements MongoDB\BSON\Persistable
 {
     private $id;
 
@@ -128,12 +116,12 @@ echo MongoDB\BSON\toJSON($bson), "\n";
   </example>
 
   <example>
-   <title><function>MongoDB\BSON\Serializable::bsonSerialize</function> returning a sequential array for root document</title>
+   <title><function>MongoDB\BSON\Persistable::bsonSerialize</function> returning a sequential array for root document</title>
    <programlisting role="php">
 <![CDATA[
 <?php
 
-class MyArray implements MongoDB\BSON\Serializable
+class MyArray implements MongoDB\BSON\Persistable
 {
     function bsonSerialize(): array
     {
@@ -156,12 +144,12 @@ echo MongoDB\BSON\toJSON($bson), "\n";
   </example>
 
   <example>
-   <title><function>MongoDB\BSON\Serializable::bsonSerialize</function> returning an associative array for document field</title>
+   <title><function>MongoDB\BSON\Persistable::bsonSerialize</function> returning an associative array for document field</title>
    <programlisting role="php">
 <![CDATA[
 <?php
 
-class MyDocument implements MongoDB\BSON\Serializable
+class MyDocument implements MongoDB\BSON\Persistable
 {
     function bsonSerialize(): array
     {
@@ -185,12 +173,12 @@ echo MongoDB\BSON\toJSON($bson), "\n";
   </example>
 
   <example>
-   <title><function>MongoDB\BSON\Serializable::bsonSerialize</function> returning a sequential array for document field</title>
+   <title><function>MongoDB\BSON\Persistable::bsonSerialize</function> returning a sequential array for document field</title>
    <programlisting role="php">
 <![CDATA[
 <?php
 
-class MyArray implements MongoDB\BSON\Serializable
+class MyArray implements MongoDB\BSON\Persistable
 {
     function bsonSerialize(): array
     {
@@ -218,7 +206,7 @@ echo MongoDB\BSON\toJSON($bson), "\n";
  <refsect1 role="seealso">
   &reftitle.seealso;
   <simplelist>
-   <member><function>MongoDB\BSON\Unserializable::bsonUnserialize</function></member>
+   <member><function>MongoDB\BSON\Unpersistable::bsonUnserialize</function></member>
    <member><interfacename>MongoDB\BSON\Persistable</interfacename></member>
    <member><xref linkend="mongodb.persistence"/></member>
   </simplelist>
