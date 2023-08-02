@@ -10,7 +10,7 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>abstract</modifier> <modifier>public</modifier> <type class="union"><type>array</type><type>object</type></type><methodname>MongoDB\BSON\Serializable::bsonSerialize</methodname>
+   <modifier>abstract</modifier> <modifier>public</modifier> <type class="union"><type>array</type><classname>stdClass</classname></type><methodname>MongoDB\BSON\Serializable::bsonSerialize</methodname>
    <void />
   </methodsynopsis>
   <para>
@@ -46,6 +46,34 @@
   <para>
    An <type>array</type> or <classname>stdClass</classname> to be serialized as
    a BSON array or document.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>PECL mongodb 1.17.0</entry>
+       <entry>
+        <para>
+         The return type was changed to only allow an <type>array</type> or <classname>stdClass</classname>
+         value to be returned. As the return type is tentative, this will only
+         emit a deprecation warning on PHP 8.1 and newer.
+        </para>
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
   </para>
  </refsect1>
 
